@@ -7,6 +7,14 @@ function App() {
 
     const id = Math.round(Math.random() * 9999)
 
+    const deleteBookById = (id) => {
+        const updatedBooks = books.filter((book) => {
+            return book.id !== id;
+        });
+        
+        setBooks(updatedBooks);
+    };
+
     const createBook = (title) => {
         const updatedBooks = [
             ...books,
