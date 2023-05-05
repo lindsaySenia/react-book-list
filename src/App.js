@@ -12,6 +12,10 @@ function App() {
         setBooks(response.data);
     };
 
+    useEffect(() => {
+        fetchBooks();
+    }, []);
+
 
     const editBookById = (id, newTitle) => {
         const updatedBooks = books.map((book) => {
